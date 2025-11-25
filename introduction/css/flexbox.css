@@ -6,9 +6,9 @@
 
 .container div {
   background-color: White;
-  width: 100px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;  
+  width: 500px;
+  margin: 20px;
+  padding: 20px;
+  text-align: justify;  
   font-size: 30px;
 }
