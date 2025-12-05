@@ -1,0 +1,355 @@
+/* Colors */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #000000;
+    --text-secondary: #6c757d;
+    --border-color: #e9ecef;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    padding-top: 76px;
+}
+
+.small-text {
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar.scrolled {
+    box-shadow: var(--shadow-md);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.02em;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover {
+    opacity: 0.7;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link[href^="mailto:"]::after {
+    display: none;
+}
+
+.navbar-toggler {
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4.5rem 0 3.5rem;
+    background: linear-gradient(to bottom, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-content h1 {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+    letter-spacing: -0.03em;
+}
+
+.hero-content .lead {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+    font-weight: 400;
+}
+
+.hero-content .small-text {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Main Content - Card Layout */
+.main-content {
+    padding: 3rem 0 5rem;
+}
+
+/* Less perfect spacing - more organic */
+.row.g-4 > * {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.content-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: 100%;
+    overflow: hidden;
+}
+
+.content-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: #d0d0d0;
+}
+
+/* Varied card styles for more organic feel */
+.about-section {
+    border-left: 3px solid var(--text-primary);
+    border-radius: 8px;
+}
+
+.card-tall {
+    min-height: 280px;
+}
+
+.card-minimal {
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+.card-minimal:hover {
+    border-color: #c0c0c0;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-wide {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.about-section .card-body {
+    padding: 2.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    font-size: 1.35rem;
+}
+
+.about-section .card-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+
+.about-section .card-text {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+/* Footer - Minimal design */
+.footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .hero-section {
+        padding: 3rem 0 2rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .main-content {
+        padding: 2rem 0 3rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .container-lg {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .display-3 {
+        font-size: 1.75rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+
+/* Smooth scroll behavior */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.navbar-brand:focus {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+}
+
+/* Subtle accent for about section only */
+.about-section::before {
+    display: none;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
