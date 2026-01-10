@@ -1,10 +1,11 @@
+export const readmeContent = `
 # Welcome to GelOS
-![Version](https://img.shields.io/badge/version-1.0.0-green?style=flat-square)
+![Version](https://img.shields.io/badge/version-2.0.0-green?style=flat-square)
 ![Status](https://img.shields.io/badge/status-stable-blue?style=flat-square)
 
 Gelo + OS = GelOS. A fully interactive web-based operating system simulation designed to showcase my skills, certifications, and projects in Computer Science, Cyber Security, and Forensics.
 
-This project runs entirely in the browser using Vanilla JavaScript, HTML5, and Tailwind CSS. No backend required.
+This project runs entirely in the browser using **Vue.js 3**, **Pinia**, and **Tailwind CSS**. No backend required.
 
 ---
 
@@ -21,37 +22,39 @@ You can interact with this portfolio using the **Graphical User Interface (GUI)*
 * **Taskbar:** Open windows appear in the bottom taskbar. Click them to bring them to the front.
 
 ### 💻 Terminal Interface (CLI)
-For the true hacker experience, use the `root@gelo:~$` terminal window.
+For the true hacker experience, use the \`root@gelo:~$\` terminal window.
 
 | Command | Description | Usage Example |
 | :--- | :--- | :--- |
-| `help` | Show available commands | `help` |
-| `ls` | List files in current directory | `ls` |
-| `cd` | Change directory | `cd documents` or `cd ..` |
-| `open` | Open a file or application | `open {filename}` |
-| `whoami` | Display profile information | `whoami` |
-| `clear` | Clear terminal screen | `clear` |
+| \`help\` | Show available commands | \`help\` |
+| \`ls\` | List files in current directory | \`ls\` |
+| \`cd\` | Change directory | \`cd documents\` or \`cd ..\` |
+| \`open\` | Open a file or application | \`open {filename}\` |
+| \`whoami\` | Display profile information | \`whoami\` |
+| \`clear\` | Clear terminal screen | \`clear\` |
 
-> **Pro Tip:** Press `TAB` to auto-complete filenames and paths. Use `↑` / `↓` arrows to cycle through your command history.
+> **Pro Tip:** Press \`TAB\` to auto-complete filenames and paths. Use \`↑\` / \`↓\` arrows to cycle through your command history.
 
 ---
 
 ## 📂 Virtual File System
 The OS features a simulated recursive file system. You can navigate paths just like a real Linux machine.
 
-* `~/desktop`: System shortcuts.
-* `~/documents`: My certifications (C3SA, CCEP) and Resume.
-* `~/pictures`: Gallery of hackathons and events.
+* \`~/desktop\`: System shortcuts.
+* \`~/documents\`: My certifications (C3SA, CCEP) and Resume.
+* \`~/pictures\`: Gallery of hackathons and events.
 
 ---
 
 ## 🛠️ Built With
-* **[Tailwind CSS](https://tailwindcss.com/):** Utility-first styling for the layout and responsive design.
-* **[Interact.js](https://interactjs.io/):** Powerful drag-and-drop and resizing physics for windows.
+* **[Vue.js 3](https://vuejs.org/):** The Progressive JavaScript Framework.
+* **[Tailwind CSS](https://tailwindcss.com/):** Utility-first styling for the layout.
+* **[Interact.js](https://interactjs.io/):** Powerful drag-and-drop and resizing physics.
 * **[FontAwesome](https://fontawesome.com/):** Scalable vector icons for the UI.
-* **[Marked.js](https://marked.js.org/):** Markdown parsing to render this README dynamically inside the OS.
+* **[Marked.js](https://marked.js.org/):** Markdown parsing to render this README dynamically.
 * **[Fira Code](https://github.com/tonsky/FiraCode):** Monospace font for the coding aesthetic.
 
 ---
 
-*© 2025 Angelo Laus. Bachelor of Science in Computer Science specialized in Cybersecurity & Forensics at Asia Pacific College, Philippines.*
+*© 2026 Angelo Laus. Bachelor of Science in Computer Science specialized in Cybersecurity & Forensics at Asia Pacific College, Philippines.*
+`;
